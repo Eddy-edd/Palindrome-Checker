@@ -1,0 +1,14 @@
+function palindrome(str){
+    let reg = /[\W_]/g;
+     let smallStr = str.toLowerCase().replace(reg,"");
+
+   console.log(smallStr);
+
+    let reversed = smallStr.split("").reverse().join("");
+    return reversed === smallStr? true: false
+
+}
+console.log(palindrome("race car")); // returns true
+console.log(palindrome("Eye")); // returns true
+console.log(palindrome("1 eye for of 1 eye."));// returns false
+console.log(palindrome("A man, a plan, a canal. Panama"));// returns true
